@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p>Creando un objeto en javascript.</p>
+   <p id="demo"></p>
+   <p id="demo2"></p>
+   <p id="demo3"></p>
+   </body>
+  <script>
+    function ejercicio2(nombre, dia, mes, anio){
+    this.nombre = nombre;
+    this.dia = dia;
+    this.mes = mes;
+    this.anio = anio;
+    this.edad = function (){
+      return  "La edad  actual de " +     this.nombre + " es " + (2017 - this.anio);
+    };
+
+}
+
+var persona2 = new ejercicio2("Bari", 7, "Enero", 1993);
+var persona3 = new ejercicio2("maria", 7, "feb", 2000);
+var persona4 = new ejercicio2("noe", 7, "mar", 2003);
+
+document.getElementById("demo").innerHTML = persona2.edad();
+document.getElementById("demo2").innerHTML = persona3.edad();
+document.getElementById("demo3").innerHTML = persona4.edad();
+
+   console.log(persona2.edad());
+   console.log(persona3.edad());
+  console.log(persona4.edad());
+    </script>
+
+
+</html>

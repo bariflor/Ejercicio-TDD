@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p>Creando un objeto en javascript.</p>
+   <p id="demo"></p>
+   <p id="demo2"></p>
+   <p id="demo3"></p>
+   
+      <script>
+      function calcularArea(base, altura){
+        this.base = base;
+        this.altura = altura;
+        this.rectangulo = function (){
+        return  "El resultado del area es " + (this.base * this.altura);
+    }
+  }
+  var rect1 = new calcularArea(10,20);
+
+  document.getElementById("demo").innerHTML = rect1.rectangulo();
+      </script>
+
+  </body>
+</html>

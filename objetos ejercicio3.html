@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p>Creando un objeto en javascript.</p>
+    <p id="demo"></p>
+
+  <script>
+    function ejercicio3(nombre, edad, pasatiempo){
+      this.nombre = nombre;
+      this.edad = edad;
+      this.pasatiempo = pasatiempo;
+    }
+    var persona1 = new ejercicio3("Bari", 24, "mirar peliculas");
+    console.log(persona1);
+    document.getElementById("demo").innerHTML = "Hola soy " +     persona1.nombre + " tengo " + persona1.edad + " años y me gusta " + persona1.pasatiempo + ".";
+  </script>
+
+  </body>
+</html>
